@@ -46,7 +46,7 @@
                 echo '  </div>';
                 echo '</div>';
             }else if ($localCount < $maxCount ){
-				echo '<div style="padding-bottom:1%;">';
+		echo '<div style="padding-bottom:1%;">';
                 echo '      <h4><a href="'.$postLink.'" target="_blank">'.$postTitle.'</a></h4>';
                 echo '  <div style="display:inline-block; vertical-align:top;">';
                 echo '      <a href="'.$postLink.'" target="_blank"><span><img src="'.$postThumb.'" width="160px" alt="'.$postTitle.'" /></span></a>';
@@ -54,7 +54,7 @@
                 echo '  <div style="display:inline-block;">';
                 echo '      <p>'.$postDesc.' <a href="'.$postLink.'" target="_blank"> Read More <i class="fa fa-chevron-right" aria-hidden="true"></i></a></p>';
                 echo '  </div>';
-				echo '</div>';
+		echo '</div>';
             }
         }
         $localCount++;
