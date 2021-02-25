@@ -27,16 +27,16 @@
         //Post Description Cleaning
         $maxPostDescLength = 100;
         $postDescFind = strstr($postDescfull,'<p>', false); //find the first paragraph tag in the RSS2Json Description as this is where we want to start our snippit.
-		$postDescTrim = substr($postDescFind,0,$maxPostDescLength).'...';
-		$postDescCleanFirstPass = str_replace("<p>", "", $postDescTrim); //clean the tag from the description, if need be, create a second pass to remove closing tag.
-		$postDesc = $postDescCleanFirstPass; // assign short name var to the final clean pass.
+	$postDescTrim = substr($postDescFind,0,$maxPostDescLength).'...';
+	$postDescCleanFirstPass = str_replace("<p>", "", $postDescTrim); //clean the tag from the description, if need be, create a second pass to remove closing tag.
+	$postDesc = $postDescCleanFirstPass; // assign short name var to the final clean pass.
 
         if($localCount != 0){
             //Changes Padding on final post (post number 10)
             //change the html formatting to your own needs. this is just example code.
             //alternatively you can use the cleaned posts array to select your data.
             if($localCount == $maxCount){
-                echo '<div style="padding-top:1%;">';
+            	echo '<div style="padding-top:1%;">';
                 echo '      <h4><a href="'.$postLink.'" target="_blank">'.$postTitle.'</a></h4>';
                 echo '  <div style="display:inline-block; vertical-align:top;">';
                 echo '      <a href="'.$postLink.'" target="_blank"><span><img src="'.$postThumb.'" width="160px" alt="'.$postTitle.'" /></span></a>';
