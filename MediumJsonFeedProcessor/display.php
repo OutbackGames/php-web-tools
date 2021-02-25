@@ -30,11 +30,11 @@
 	$postDescTrim = substr($postDescFind,0,$maxPostDescLength).'...';
 	$postDescCleanFirstPass = str_replace("<p>", "", $postDescTrim); //clean the tag from the description, if need be, create a second pass to remove closing tag.
 	$postDesc = $postDescCleanFirstPass; // assign short name var to the final clean pass.
-
+	
+	    //why we don't want zero: Zero will be the initial key containing an element different to the items list we want.
         if($localCount != 0){
-            //Changes Padding on final post (post number 10)
+            //Changes Padding on final post (should be post number 10)
             //change the html formatting to your own needs. this is just example code.
-            //alternatively you can use the cleaned posts array to select your data.
             if($localCount == $maxCount){
             	echo '<div style="padding-top:1%;">';
                 echo '      <h4><a href="'.$postLink.'" target="_blank">'.$postTitle.'</a></h4>';
